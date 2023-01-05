@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Iceland&display=swap');
+
 /* Resets */
 *{
     margin: 0;
@@ -12,13 +14,13 @@ h1{
     margin-inline-end: 0px;
 }
 
-
 /* CSS HEX */
 :root{
     --eerie-black: #262626ff;
     --eerie-black-2: #1c1c1cff;
     --space-cadet: #292c51ff;
     --medium-slate-blue: #6c77efff;
+    --darker-slate-blue: #484d81;
     --blue: #0017ffff;
     --yellow-ryb: #ffff33ff;
     --white: #fdfdfdff;
@@ -27,7 +29,7 @@ h1{
 
 
 body{
-   background-color: var(--light-gray);
+   background-color: var(--eerie-black);
 }
 
 /* -- Alignment -- */
@@ -62,20 +64,29 @@ body{
 
 
 .txt-900{
-    font-family: 'Prompt', sans-serif;
-    font-size: 5em;
-    color: var(--medium-slate-blue);
+    font-family: 'Iceland', cursive;
+    font-size: 6em;
+    color: var(--darker-slate-blue);
     text-transform: uppercase;
     position: absolute;
+    letter-spacing: 1.1rem;
     z-index: 1;
 }
 .txt-900--innerShadow{
-    -webkit-mask-image: radial-gradient(circle, rgba(0,0,0,0)0%,rgba(0,0,0,1) 100%);
+   /* -webkit-mask-image: linear-gradient(0deg, rgba(0,0,0,1)0%,rgba(0,0,0,0) 100%); */
     mask-mode: alpha;
     mask-origin: stroke-box;
-    color: var(--eerie-black);
-    mix-blend-mode: darken;
+    color: var(--medium-slate-blue);
+    /* mix-blend-mode: darken; */
     position: absolute;
+    top:4px;
     z-index: 2;
 }
 
+#demotext{
+    color: transparent;
+    background-color: #666666;
+    -webkit-background-clip: text;
+    background-clip: text;
+    text-shadow: 0px 3px 0px rgba(255,255,255,0.5);
+}
