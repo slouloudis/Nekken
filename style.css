@@ -1,0 +1,81 @@
+/* Resets */
+*{
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+h1{
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+
+/* CSS HEX */
+:root{
+    --eerie-black: #262626ff;
+    --eerie-black-2: #1c1c1cff;
+    --space-cadet: #292c51ff;
+    --medium-slate-blue: #6c77efff;
+    --blue: #0017ffff;
+    --yellow-ryb: #ffff33ff;
+    --white: #fdfdfdff;
+    --light-gray: #ced5d9ff;
+}
+
+
+body{
+   background-color: var(--light-gray);
+}
+
+/* -- Alignment -- */
+
+.gutter{
+    max-width: 0px;
+    margin:auto;
+}
+
+.flex{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.flex > * {
+    flex: 1;
+}
+
+.boxSize{
+    box-sizing: content-box;
+    height: 90%;
+}
+
+
+.parentContainer{
+    position: relative;
+}
+/* -- Main Elements -- */
+
+/* -- Text -- */
+
+
+.txt-900{
+    font-family: 'Prompt', sans-serif;
+    font-size: 5em;
+    color: var(--medium-slate-blue);
+    text-transform: uppercase;
+    position: absolute;
+    z-index: 1;
+}
+.txt-900--innerShadow{
+    -webkit-mask-image: radial-gradient(circle, rgba(0,0,0,0)0%,rgba(0,0,0,1) 100%);
+    mask-mode: alpha;
+    mask-origin: stroke-box;
+    color: var(--eerie-black);
+    mix-blend-mode: darken;
+    position: absolute;
+    z-index: 2;
+}
+
